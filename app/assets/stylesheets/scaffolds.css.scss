@@ -30,8 +30,10 @@ a {
 }
 
 div {
-  &.field, &.actions {
+  &.field, &.actions, &.dropdown {
     margin-bottom: 10px;
+    margin-left:20px;
+    width: 450px;
   }
 }
 
@@ -65,5 +67,8 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+    margin-left:20px;
   }
 }
+
+

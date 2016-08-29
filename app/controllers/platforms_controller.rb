@@ -4,7 +4,7 @@ class PlatformsController < ApplicationController
   # GET /platforms
   # GET /platforms.json
   def index
-    @platforms = Platform.all
+    @platforms = Platform.order('platforms.name ASC').all
   end
 
   # GET /platforms/1

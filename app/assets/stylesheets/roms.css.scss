@@ -1,3 +1,30 @@
 // Place all the styles related to the Roms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.content {
+  width: 1100px;
+  height: 200px;
+  background: #fdfdfd;
+  margin: 0px auto;
+  position: relative;
+  top: 40px;
+  border: 1px solid #aaaaaa;
+}
+
+.content-loader {
+  overflow: scroll;
+}
+.content-loader table {
+  width: auto;
+  background: #aaa;
+}
+
+.content-loader table tr {
+  background: #eee;
+}
+
+.content-loader table tr td {
+
+}

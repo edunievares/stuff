@@ -24,11 +24,11 @@
     <%= f.text_field :company %>
   </div>
   <div class="field">
-    <%= f.label :passed %><br>
+    <%= f.label :passed %>
     <%= f.check_box :passed %>
   </div>
   <div class="field">
-    <%= f.label :playing %><br>
+    <%= f.label :playing %>
     <%= f.check_box :playing %>
   </div>
   <div class="field">
@@ -39,11 +39,11 @@
     <%= f.label :comment %><br>
     <%= f.text_field :comment %>
   </div>
-    <div class=dropdown">
+    <div class="dropdown">
       <%= f.label :platform_id %><br>
       <%= f.collection_select(:platform_id, Platform.all, :id, :name) %><br><br>
     </div>
-    <div class=dropdown">
+    <div class="dropdown">
       <%= f.label :genre_id %><br>
       <%= f.collection_select(:genre_id, Genre.all, :id, :name) %><br><br>
     </div>

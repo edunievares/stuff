@@ -7,7 +7,9 @@ gem 'rails', '4.1.11'
 gem 'mysql2', '~> 0.3', '= 0.3.15'
 gem 'foreigner'
 # Use SCSS for stylesheets
+gem 'sass'
 gem 'sass-rails', '~> 4.0.3'
+gem 'foundation-rails', '5.4.3.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views

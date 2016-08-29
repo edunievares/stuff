@@ -4,7 +4,7 @@ class RomsController < ApplicationController
   # GET /roms
   # GET /roms.json
   def index
-    @roms = Rom.all
+    @roms = Rom.order('roms.name ASC').all
   end
 
   # GET /roms/1
@@ -25,7 +25,6 @@ class RomsController < ApplicationController
   # POST /roms.json
   def create
     @rom = Rom.new(rom_params)
-
     respond_to do |format|
       if @rom.save
         format.html { redirect_to @rom, notice: 'Rom was successfully created.' }
@@ -69,6 +68,6 @@ class RomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rom_params
-      params.require(:rom).permit(:name, :year, :company, :passed, :playing, :savefile, :comment)
+      params.require(:rom).permit(:name, :year, :company, :passed, :playing, :savefile, :comment, :platform_id, :genre_id)
     end
 end
