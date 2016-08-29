@@ -1,5 +1,5 @@
 class CreatePlatforms < ActiveRecord::Migration
-  def change
+  def
     create_table :platforms do |t|
       t.string :name
       t.string :company

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829111129) do
+ActiveRecord::Schema.define(version: 20160829121349) do
 
   create_table "genres", force: true do |t|
     t.string   "name"
@@ -25,6 +25,20 @@ ActiveRecord::Schema.define(version: 20160829111129) do
     t.string   "company"
     t.date     "start"
     t.date     "end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roms", force: true do |t|
+    t.string   "name"
+    t.integer  "year"
+    t.string   "company"
+    t.boolean  "passed"
+    t.boolean  "playing"
+    t.string   "savefile"
+    t.integer  "platform"
+    t.integer  "genre"
+    t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
