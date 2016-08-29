@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829121349) do
+ActiveRecord::Schema.define(version: 20160829130248) do
 
   create_table "genres", force: true do |t|
     t.string   "name"
@@ -41,6 +41,14 @@ ActiveRecord::Schema.define(version: 20160829121349) do
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "platform_id"
+    t.integer  "genre_id"
   end
+
+  add_index "roms", ["genre_id"], name: "roms_genre_id_fk", using: :btree
+  add_index "roms", ["platform_id"], name: "roms_platform_id_fk", using: :btree
+
+  add_foreign_key "roms", "genres", name: "roms_genre_id_fk"
+  add_foreign_key "roms", "platforms", name: "roms_platform_id_fk"
 
 end
