@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :roms
+  resources :genres
+  resources :platforms
+
   root to: 'welcome#index'
+
+  get 'platforms', to: 'platforms#index'
+  get 'genres', to: 'genres#index'
+  get 'roms', to: 'roms#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

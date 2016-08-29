@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rom.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @rom.year %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @rom.company %>
+</p>
+
+<p>
+  <strong>Passed:</strong>
+  <%= @rom.passed %>
+</p>
+
+<p>
+  <strong>Playing:</strong>
+  <%= @rom.playing %>
+</p>
+
+<p>
+  <strong>Savefile:</strong>
+  <%= @rom.savefile %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @rom.comment %>
+</p>
+
+<%= link_to 'Edit', edit_rom_path(@rom) %> |
+<%= link_to 'Back', roms_path %>

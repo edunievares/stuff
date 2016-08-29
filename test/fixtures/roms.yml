@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  year: 1
+  company: MyString
+  passed: false
+  playing: false
+  savefile: MyString
+  comment: MyString
+
+two:
+  name: MyString
+  year: 1
+  company: MyString
+  passed: false
+  playing: false
+  savefile: MyString
+  comment: MyString

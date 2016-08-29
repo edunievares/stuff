@@ -1,0 +1,45 @@
+<%= form_for(@rom) do |f| %>
+  <% if @rom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rom.errors.count, "error") %> prohibited this rom from being saved:</h2>
+
+      <ul>
+      <% @rom.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :passed %><br>
+    <%= f.check_box :passed %>
+  </div>
+  <div class="field">
+    <%= f.label :playing %><br>
+    <%= f.check_box :playing %>
+  </div>
+  <div class="field">
+    <%= f.label :savefile %><br>
+    <%= f.text_field :savefile %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_field :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
