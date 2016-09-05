@@ -1,15 +1,17 @@
 class PlatformsController < ApplicationController
+  require 'will_paginate/array'
   before_action :set_platform, only: [:show, :edit, :update, :destroy]
 
   # GET /platforms
   # GET /platforms.json
   def index
-    @platforms = Platform.order('platforms.name ASC').all
+    @platforms = Platform.paginate(page: params[:page], per_page: 15).order('platforms.name ASC').all
   end
 
   # GET /platforms/1
   # GET /platforms/1.json
   def show
+
   end
 
   # GET /platforms/new

@@ -1,10 +1,12 @@
 class RomsController < ApplicationController
+  require 'will_paginate/array'
   before_action :set_rom, only: [:show, :edit, :update, :destroy]
 
   # GET /roms
   # GET /roms.json
   def index
-    @roms = Rom.order('roms.name ASC').all
+    #@roms = Rom.order('roms.name ASC').all
+    @roms = Rom.paginate(page: params[:page], per_page: 15).order('roms.name ASC').all
   end
 
   # GET /roms/1
