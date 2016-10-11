@@ -2,10 +2,19 @@
 
   <h1>Listing roms</h1>
 
+  <div class="input-group">
+    <%= form_tag(roms_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Roms", class: 'form-control' %>
+        <span class="input-group-btn">
+          <%= submit_tag "Search", class: 'btn btn-success' %>
+        </span>
+    <% end %>
+  </div>
 
   <div class="content-loader">
     <%= will_paginate %>
-<table>
+
+    <table>
   <thead>
     <tr>
       <th>Name</th>
@@ -38,9 +47,11 @@
         <td><%= link_to 'Destroy', rom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-    <%= will_paginate %>
+
   </tbody>
+
 </table>
+    <%= will_paginate %>
     </div>
 
 <br>
