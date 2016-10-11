@@ -5,7 +5,6 @@ class RomsController < ApplicationController
   # GET /roms
   # GET /roms.json
   def index
-    debugger
     #@roms = Rom.order('roms.name ASC').all
     @roms = Rom.search(params[:search]).paginate(page: params[:page], per_page: 15).order('roms.name ASC').all
   end
