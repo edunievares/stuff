@@ -2,6 +2,16 @@
 
   <h1>Listing genres</h1>
 
+  <div class="input-group">
+    <%= form_tag(genres_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Genre", class: 'form-control' %>
+        <span class="input-group-btn">
+          <%= submit_tag "Search", class: 'btn btn-success' %>
+        </span>
+    <% end %>
+  </div>
+
+
   <div class="content-loader">
     <%= will_paginate %>
 <table>
