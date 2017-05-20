@@ -23,10 +23,10 @@
     <%= f.label :year %><br>
     <%= f.number_field :year %>
   </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
-  </div>
+    <div class="dropdown">
+      <%= f.label :pais_id %><br>
+      <%= f.collection_select(:paise_id, Paise.order('paises.name ASC').all, :id, :name) %><br><br>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>

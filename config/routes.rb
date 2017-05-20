@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :paises
   resources :peliculas
   resources :roms
   resources :genres
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get 'genres', to: 'genres#index'
   get 'roms', to: 'roms#index'
   get 'peliculas', to: 'peliculas#index'
+  get 'paises', to: 'paises#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
