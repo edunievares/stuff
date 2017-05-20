@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :peliculas
   resources :roms
   resources :genres
   resources :platforms
