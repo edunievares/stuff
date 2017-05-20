@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'platforms', to: 'platforms#index'
   get 'genres', to: 'genres#index'
   get 'roms', to: 'roms#index'
+  get 'peliculas', to: 'peliculas#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
