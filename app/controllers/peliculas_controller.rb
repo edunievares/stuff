@@ -1,10 +1,12 @@
 class PeliculasController < ApplicationController
+  require 'will_paginate/array'
   before_action :set_pelicula, only: [:show, :edit, :update, :destroy]
 
   # GET /peliculas
   # GET /peliculas.json
   def index
-    @peliculas = Pelicula.all
+    #@peliculas = Pelicula.all
+    @peliculas = Pelicula.search(params[:search]).paginate(page: params[:page], per_page: 15).order('peliculas.name ASC').all
   end
 
   # GET /peliculas/1

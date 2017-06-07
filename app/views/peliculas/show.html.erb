@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @pelicula.name %>
 </p>
 
@@ -11,14 +11,14 @@
 </p>
 
 <p>
-  <strong>Year:</strong>
+  <strong>Año:</strong>
   <%= @pelicula.year %>
 </p>
 
 <p>
-  <strong>Country:</strong>
+  <strong>País:</strong>
   <%= @pelicula.paise.name %>
 </p>
 
-<%= link_to 'Edit', edit_pelicula_path(@pelicula) %> |
-<%= link_to 'Back', peliculas_path %>
+<%= link_to 'Editar', edit_pelicula_path(@pelicula) %> |
+<%= link_to 'Volver', peliculas_path %>
