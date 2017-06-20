@@ -7,6 +7,15 @@ class RomsController < ApplicationController
   def index
     #@roms = Rom.order('roms.name ASC').all
     @roms = Rom.search(params[:search]).paginate(page: params[:page], per_page: 15).order('roms.name ASC').all
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Roms list",
+               template: "roms/index.pdf.erb",
+               locals: {:roms => @roms}
+      end
+    end
   end
 
   # GET /roms/1
