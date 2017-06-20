@@ -11,6 +11,8 @@ gem 'sass'
 gem 'sass-rails', '~> 4.0.3'
 gem 'foundation-rails', '5.4.3.1'
 gem 'will_paginate', '3.1.0'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -41,4 +43,6 @@ gem 'spring',        group: :development
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+
+
 
