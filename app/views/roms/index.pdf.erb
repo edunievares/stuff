@@ -1,20 +1,22 @@
 
-<h1>Listado de Roms</h1>
+<h1 align="center">Listado de Roms</h1>
 
 <table>
-
+  <thead>
   <tr>
-    <td>Nombre</td>
-    <td>Plataforma</td>
-    <td>Compañía</td>
+    <th>Nombre</th>
+    <th>Plataforma</th>
+    <th>Empresa</th>
   </tr>
+  </thead>
 
-  <% @roms.all.each do |rom| %>
-    <tr>
-      <td><%= rom.name %></td>
-      <td><%= rom.platform.name %></td>
-      <td><%= rom.company %></td>
-    </tr>
-<% end %>
-
-  <table>
+  <tbody>
+  <% @roms.each do |rom| %>
+      <tr>
+        <td><%= rom.name %></td>
+        <td><%= rom.platform.name %></td>
+        <td><%= rom.company %></td>
+      </tr>
+  <% end %>
+  <tbody>
+  </table>
